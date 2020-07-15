@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10/07/2020</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+            Objetos JavaScript => São uma forma de representação de coisas ou objtos reais em forma de código.
+
+
+        */
+
+        
+        // Exemplo de função no javascript
+        // function mostrarAlerta(){
+        //     // Aqui dentro é o código que será executado quando esta função for chamada.
+        // }
+
+
+        // Exemplo de uma função void que não tem parâmetro.
+        function mostrarAlerta(){
+            alert('Fui chamado por outra função!!!');
+        }
+
+        // Exemplo de uma função void que tem parâmetro
+        function mostrarAlerta2(mensagem){
+            alert(mensagem);
+        }
+
+        // Exemplo de função que tem retorno de objeto e tem parâmetro.
+        function retornarSeONumeroEParOuImpar(numero){
+            if(numero % 2 != 0){
+                return { texto :"Impar", numero: numero };
+            }else{
+                return { texto :"Par", numero: numero };
+            }
+        }
+
+        // Exemplo de um retorno sem else
+        // function retornarSeONumeroEParOuImpar(numero){
+        //     if(numero % 2 != 0){
+        //         return { texto :"Impar", numero: numero };
+        //     }          
+        //     return { texto :"Par", numero: numero };
+        // }
+        
+        // Função que sabe criar uma tabuada dinamica.
+        function criarTabuadaDinamica(numero, final){
+            for(var i = 0; i <= final; i++){
+                // document.write(numero + " X " + i + " = " + numero * i + "<br>");
+                document.write(`${numero} x ${i} = ${numero * i} <br>`);
+            }
+        }
+
+        function obterDadosEGerarTabuada(){
+            var multiplicador = parseInt(prompt('Digite o numero que deseja multiplicar'));
+            var ateQuanto = parseInt(prompt('Digite até quanto deseja multiplicar'));
+
+            criarTabuadaDinamica(multiplicador, ateQuanto);
+        }
+
+        // mostrarAlerta();
+        // mostrarAlerta2("Mensagem 1");
+        // mostrarAlerta2("Mensagem 2");
+
+        // var resultado  = retornarSeONumeroEParOuImpar(8);
+        // mostrarAlerta2(resultado.texto);
+
+        // criarTabuadaDinamica(7, 100);
+
+        // obterDadosEGerarTabuada();
+
+        function andar(){
+            document.write('Estou andando!!!!!! <br>')
+        }
+        
+        function falar(){
+            document.write('Bla bla bla ...<br>')
+        }
+
+        function correr(){
+            document.write('Estou cansado, corre você \\o/<br>');
+        }
+
+        var pessoa = {
+            nome: "Fulano",
+            idade: 25,
+            andar: andar,
+            falar: falar,
+            correr: correr
+        }
+        
+        console.log(pessoa);
+      
+
+    </script>
+
+</body>
+</html>
